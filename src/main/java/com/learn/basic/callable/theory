@@ -1,0 +1,14 @@
+
+####Callable Interface###
+
+
+public interface Callable<V> {
+    //computes  a result, or throws an exception if unable to do so.
+    V call() throws Exception;
+}
+
+Task Life-Cycle
+## 1 created
+## 2 submitted
+## 3 started
+## 4 completed

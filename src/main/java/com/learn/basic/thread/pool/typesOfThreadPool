@@ -1,0 +1,15 @@
+
+
+Type of ThreadPool in Java
+
+#  newFixedThreadPool
+#  newSingleThreadExecutor
+#  newCachedThreadPool
+#  newScheduledThreadPool
+#  newWorkStealingThreadPool
+
+
+Executor LifeCycle
+    1 running
+    2 shutting down
+    3 terminated

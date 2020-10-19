@@ -1,0 +1,21 @@
+
+
+#
+There's no latency when request is received and processed because no time is lost in thread creation.
+#
+Memory used by threads is now limited.
+#
+
+
+void receiveAndExecuteClientOrdersBest() {
+    int expectedConcurrentOrders = 100;
+    Executor executor = Executor.newFixedThreadPool(expectedConcurrentOrders);
+    while(true) {
+        final Order order = waitForNextOrder();
+        executor.execute(new Runnable() {
+            public void run() {
+                order.execute();
+            }
+        });
+    }
+}

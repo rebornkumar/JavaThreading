@@ -1,0 +1,15 @@
+
+Method simply accepts an order and tries to execute it.
+It blocks other requests till current request is completed
+
+void receiveAndExecuteClientOrders() {
+    while(true) {
+        Order order = waitForNextOrder();
+        order.execute();
+    }
+}
+*Limitation of the approach*
+  # Application creates unlimited number of threads
+  # Active thread consume memory even if they are idle.
+  # There is limit imposed by JVM and underlying OS on the number of thread that can be created.
+

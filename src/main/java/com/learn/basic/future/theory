@@ -1,0 +1,7 @@
+
+
+##  FUTURE INTERFACE  ##
+
+1. future interface is used to represent the result of asynchronous computation
+2. It provides method to check the status of submitted task
+3. It also allows to cancel submitted task
